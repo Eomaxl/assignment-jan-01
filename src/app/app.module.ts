@@ -13,10 +13,15 @@ import { ListComponent } from './Components/list/list.component';
 import { AddCustComponent } from './Components/add-cust/add-cust.component';
 import { DeleteCustComponent } from './Components/delete-cust/delete-cust.component';
 import { UpdateCustComponent } from './Components/update-cust/update-cust.component';
+import { AppRouterModule } from './Modules/app-router/app-routing.module';
+import { UserComponent } from './Components/user/user.component';
+import { UserDetailsComponent } from './Components/user-details/user-details.component';
+import { UserService } from './Services/user.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, FooterComponent, SubNavComponent, OverviewComponent, CustSubNavComponent, ListComponent, AddCustComponent, DeleteCustComponent, UpdateCustComponent ],
-  bootstrap:    [ AppComponent ]
+  imports:      [ BrowserModule, FormsModule ,AppRouterModule],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, FooterComponent, SubNavComponent, OverviewComponent, CustSubNavComponent, ListComponent, AddCustComponent, DeleteCustComponent, UpdateCustComponent, UserComponent, UserDetailsComponent ],
+  bootstrap:    [ AppComponent ],
+  providers: [UserService]
 })
 export class AppModule { }
